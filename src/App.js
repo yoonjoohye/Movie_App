@@ -37,7 +37,7 @@ class App extends Component {
   _callApi=()=>{
     //fetch promise를 return, 이 모든 데이터는 제이슨임
     return fetch("https://yts.am/api/v2/list_movies.json?sort_by=donwload_count")//fetch는 ajax로 받을수있음
-    .then(potato=>potato.json()) //response로 체크, 제이슨 변ㄹ한, 
+    .then(potato=>potato.json()) //response로 체크, 제이슨 변환, 
     .then(json=> json.data.movies)//화살표 자체에 return 기능있음
     .catch(err=>console.log(err))
   };
